@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol ItunesDelegate <NSObject>
+
+- (void) recebeDados:(NSDictionary *) resposta;
+
+@end
+
 @interface ItunesAPI : NSObject
+
+@property id<ItunesDelegate> origem;
+
+- (void) buscaLivro:(NSString *)termoDaBusca;
 
 @end
