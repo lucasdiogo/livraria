@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "ItunesAPI.h"
 
-@interface LivrosTableViewController : UITableViewController <ItunesDelegate>
+@interface LivrosTableViewController : UITableViewController <ItunesDelegate, UISearchBarDelegate>
 
 @end

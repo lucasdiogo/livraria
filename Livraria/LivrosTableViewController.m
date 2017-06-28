@@ -91,6 +91,18 @@
     [self.tableView reloadData];
 }
 
+#pragma mark - SearchBar
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [itunes buscaLivro:searchBar.text];
+    [searchBar resignFirstResponder];
+}
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    [itunes buscaLivro:@"java"];
+}
+
+
+
 
 
 /*

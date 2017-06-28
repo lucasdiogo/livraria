@@ -14,9 +14,11 @@
 
 -(void)buscaLivro:(NSString *)termoDaBusca{
     
-    NSString * itunesSearchTerm = [termoDaBusca stringByReplacingOccurrencesOfString:@" " withString:@"+"];
     
-    NSString * escapedSearchTerm = [itunesSearchTerm stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet alphanumericCharacterSet]];
+    
+    NSString * escapedSearchTerm = [termoDaBusca stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet alphanumericCharacterSet]];
+    
+//    NSString * itunesSearchTerm = [escapedSearchTerm stringByReplacingOccurrencesOfString:@"%20" withString:@"+"];
     
     
     NSString * urlPath = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&media=ebook&limit=200", escapedSearchTerm];

@@ -17,6 +17,8 @@
 		AE03BAB71F02B4F800C1907F /* FavoritosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03BAB61F02B4F800C1907F /* FavoritosTableViewController.m */; };
 		AE03BABA1F02BC1E00C1907F /* LivroTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03BAB91F02BC1E00C1907F /* LivroTableViewCell.m */; };
 		AE03BABD1F02C29000C1907F /* ourocard.png in Resources */ = {isa = PBXBuildFile; fileRef = AE03BABC1F02C29000C1907F /* ourocard.png */; };
+		AECF14141F040AA600C4A493 /* DetalhesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF14131F040AA600C4A493 /* DetalhesViewController.m */; };
+		AECF14171F040CAE00C4A493 /* Livro.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF14161F040CAE00C4A493 /* Livro.m */; };
 		AEED02AF1F03D5230071A911 /* ItunesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = AEED02AE1F03D5230071A911 /* ItunesAPI.m */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,10 @@
 		AE03BAB81F02BC1E00C1907F /* LivroTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivroTableViewCell.h; sourceTree = "<group>"; };
 		AE03BAB91F02BC1E00C1907F /* LivroTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivroTableViewCell.m; sourceTree = "<group>"; };
 		AE03BABC1F02C29000C1907F /* ourocard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ourocard.png; sourceTree = "<group>"; };
+		AECF14121F040AA600C4A493 /* DetalhesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalhesViewController.h; sourceTree = "<group>"; };
+		AECF14131F040AA600C4A493 /* DetalhesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalhesViewController.m; sourceTree = "<group>"; };
+		AECF14151F040CAE00C4A493 /* Livro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Livro.h; sourceTree = "<group>"; };
+		AECF14161F040CAE00C4A493 /* Livro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Livro.m; sourceTree = "<group>"; };
 		AEED02AD1F03D5230071A911 /* ItunesAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItunesAPI.h; sourceTree = "<group>"; };
 		AEED02AE1F03D5230071A911 /* ItunesAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItunesAPI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +109,8 @@
 				AE03BAB61F02B4F800C1907F /* FavoritosTableViewController.m */,
 				AE03BAB81F02BC1E00C1907F /* LivroTableViewCell.h */,
 				AE03BAB91F02BC1E00C1907F /* LivroTableViewCell.m */,
+				AECF14121F040AA600C4A493 /* DetalhesViewController.h */,
+				AECF14131F040AA600C4A493 /* DetalhesViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -120,6 +128,8 @@
 			children = (
 				AEED02AD1F03D5230071A911 /* ItunesAPI.h */,
 				AEED02AE1F03D5230071A911 /* ItunesAPI.m */,
+				AECF14151F040CAE00C4A493 /* Livro.h */,
+				AECF14161F040CAE00C4A493 /* Livro.m */,
 			);
 			name = Negocio;
 			sourceTree = "<group>";
@@ -155,6 +165,7 @@
 				TargetAttributes = {
 					AE03BA931F02AF4000C1907F = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 94T62729BY;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -200,7 +211,9 @@
 				AE03BAB41F02B45A00C1907F /* LivrosTableViewController.m in Sources */,
 				AE03BABA1F02BC1E00C1907F /* LivroTableViewCell.m in Sources */,
 				AE03BA9C1F02AF4000C1907F /* AppDelegate.m in Sources */,
+				AECF14141F040AA600C4A493 /* DetalhesViewController.m in Sources */,
 				AE03BA991F02AF4000C1907F /* main.m in Sources */,
+				AECF14171F040CAE00C4A493 /* Livro.m in Sources */,
 				AEED02AF1F03D5230071A911 /* ItunesAPI.m in Sources */,
 				AE03BAA51F02AF4000C1907F /* Livraria.xcdatamodeld in Sources */,
 			);
@@ -322,6 +335,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 94T62729BY;
 				INFOPLIST_FILE = Livraria/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.lucas.Livraria;
@@ -333,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 94T62729BY;
 				INFOPLIST_FILE = Livraria/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.lucas.Livraria;
