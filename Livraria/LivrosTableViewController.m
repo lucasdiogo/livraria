@@ -9,15 +9,29 @@
 #import "LivrosTableViewController.h"
 #import "LivroTableViewCell.h"
 
-@interface LivrosTableViewController ()
+@interface LivrosTableViewController (){
+
+}
 
 @end
 
-@implementation LivrosTableViewController
+@implementation LivrosTableViewController{
+    ItunesAPI * itunes;
+    NSArray * results;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    
+    itunes = [[ItunesAPI alloc] init];
+    
+    itunes.origem = self;
+    
+    results = [NSArray new];
+    
+    [itunes buscaLivro:@"Java"];
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -39,34 +53,44 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 2;
+    return results.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     LivroTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"livroCelula" forIndexPath:indexPath];
     
-    switch (indexPath.row) {
-        case 0:
-            cell.autorLabel.text = @"Lucas Diogo";
-            cell.tituloLabel.text = @"Tudo sobre Ouocard";
-            cell.subtituloLabel.text = @"Uma nova pespectiva sobre o aplicativo";
-            cell.precoLabel.text = @"R$ 140,00";
-            [cell.capaImageView setImage:[UIImage imageNamed:@"ourocard.png"]];
-            
-            break;
-        case 1:
-            
-            break;
-            
-        default:
-            break;
-    }
+    NSDictionary * result = [results objectAtIndex:indexPath.row];
+  
     
+    NSLog(@"passando na celula");
+    
+    
+    
+    cell.autorLabel.text = [result objectForKey:@"artistName"];
+    cell.tituloLabel.text = [result objectForKey:@"trackName"];
+//    cell.subtituloLabel.text = [result objectForKey:@"genres"];
+    cell.precoLabel.text = [result objectForKey:@"formattedPrice"];
+    [cell.capaImageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[result objectForKey:@"artworkUrl100"]] options:NSDataReadingUncached error:nil]]];
     // Configure the cell...
     
     return cell;
 }
+
+#pragma mark - Itunes
+-(void)recebeDados:(NSDictionary *)resposta{
+    NSLog(@"Cheguei aqui");
+    
+    results = [[resposta objectForKey:@"results"] allObjects];
+    for (NSDictionary * objeto in results) {
+        NSLog(@"Titulo: %@", [objeto objectForKey:@"trackName"]);
+        NSLog(@"Autor: %@", [objeto objectForKey:@"artistName"]);
+    }
+    
+    [self.tableView reloadData];
+}
+
 
 
 /*

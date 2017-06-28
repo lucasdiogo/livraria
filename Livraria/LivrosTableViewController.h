@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ItunesAPI.h"
 
-@interface LivrosTableViewController : UITableViewController
+@interface LivrosTableViewController : UITableViewController <ItunesDelegate>
 
 @end
