@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		AE03BA991F02AF4000C1907F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03BA981F02AF4000C1907F /* main.m */; };
 		AE03BA9C1F02AF4000C1907F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03BA9B1F02AF4000C1907F /* AppDelegate.m */; };
-		AE03BA9F1F02AF4000C1907F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03BA9E1F02AF4000C1907F /* ViewController.m */; };
 		AE03BAA21F02AF4000C1907F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE03BAA01F02AF4000C1907F /* Main.storyboard */; };
 		AE03BAA51F02AF4000C1907F /* Livraria.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE03BAA31F02AF4000C1907F /* Livraria.xcdatamodeld */; };
 		AE03BAA71F02AF4000C1907F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE03BAA61F02AF4000C1907F /* Assets.xcassets */; };
 		AE03BAAA1F02AF4000C1907F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE03BAA81F02AF4000C1907F /* LaunchScreen.storyboard */; };
+		AE03BAB41F02B45A00C1907F /* LivrosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03BAB31F02B45A00C1907F /* LivrosTableViewController.m */; };
+		AE03BAB71F02B4F800C1907F /* FavoritosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03BAB61F02B4F800C1907F /* FavoritosTableViewController.m */; };
+		AE03BABA1F02BC1E00C1907F /* LivroTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03BAB91F02BC1E00C1907F /* LivroTableViewCell.m */; };
+		AE03BABD1F02C29000C1907F /* ourocard.png in Resources */ = {isa = PBXBuildFile; fileRef = AE03BABC1F02C29000C1907F /* ourocard.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +24,18 @@
 		AE03BA981F02AF4000C1907F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE03BA9A1F02AF4000C1907F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AE03BA9B1F02AF4000C1907F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AE03BA9D1F02AF4000C1907F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AE03BA9E1F02AF4000C1907F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AE03BAA11F02AF4000C1907F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE03BAA41F02AF4000C1907F /* Livraria.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Livraria.xcdatamodel; sourceTree = "<group>"; };
 		AE03BAA61F02AF4000C1907F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE03BAA91F02AF4000C1907F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE03BAAB1F02AF4000C1907F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE03BAB21F02B45A00C1907F /* LivrosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivrosTableViewController.h; sourceTree = "<group>"; };
+		AE03BAB31F02B45A00C1907F /* LivrosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivrosTableViewController.m; sourceTree = "<group>"; };
+		AE03BAB51F02B4F800C1907F /* FavoritosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritosTableViewController.h; sourceTree = "<group>"; };
+		AE03BAB61F02B4F800C1907F /* FavoritosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritosTableViewController.m; sourceTree = "<group>"; };
+		AE03BAB81F02BC1E00C1907F /* LivroTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivroTableViewCell.h; sourceTree = "<group>"; };
+		AE03BAB91F02BC1E00C1907F /* LivroTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivroTableViewCell.m; sourceTree = "<group>"; };
+		AE03BABC1F02C29000C1907F /* ourocard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ourocard.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +68,10 @@
 		AE03BA961F02AF4000C1907F /* Livraria */ = {
 			isa = PBXGroup;
 			children = (
+				AE03BABB1F02C26500C1907F /* Imagens */,
+				AE03BAB11F02B2C200C1907F /* Controller */,
 				AE03BA9A1F02AF4000C1907F /* AppDelegate.h */,
 				AE03BA9B1F02AF4000C1907F /* AppDelegate.m */,
-				AE03BA9D1F02AF4000C1907F /* ViewController.h */,
-				AE03BA9E1F02AF4000C1907F /* ViewController.m */,
 				AE03BAA01F02AF4000C1907F /* Main.storyboard */,
 				AE03BAA61F02AF4000C1907F /* Assets.xcassets */,
 				AE03BAA81F02AF4000C1907F /* LaunchScreen.storyboard */,
@@ -80,6 +88,27 @@
 				AE03BA981F02AF4000C1907F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AE03BAB11F02B2C200C1907F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE03BAB21F02B45A00C1907F /* LivrosTableViewController.h */,
+				AE03BAB31F02B45A00C1907F /* LivrosTableViewController.m */,
+				AE03BAB51F02B4F800C1907F /* FavoritosTableViewController.h */,
+				AE03BAB61F02B4F800C1907F /* FavoritosTableViewController.m */,
+				AE03BAB81F02BC1E00C1907F /* LivroTableViewCell.h */,
+				AE03BAB91F02BC1E00C1907F /* LivroTableViewCell.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AE03BABB1F02C26500C1907F /* Imagens */ = {
+			isa = PBXGroup;
+			children = (
+				AE03BABC1F02C29000C1907F /* ourocard.png */,
+			);
+			name = Imagens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +171,7 @@
 			files = (
 				AE03BAAA1F02AF4000C1907F /* LaunchScreen.storyboard in Resources */,
 				AE03BAA71F02AF4000C1907F /* Assets.xcassets in Resources */,
+				AE03BABD1F02C29000C1907F /* ourocard.png in Resources */,
 				AE03BAA21F02AF4000C1907F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,7 +183,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE03BA9F1F02AF4000C1907F /* ViewController.m in Sources */,
+				AE03BAB71F02B4F800C1907F /* FavoritosTableViewController.m in Sources */,
+				AE03BAB41F02B45A00C1907F /* LivrosTableViewController.m in Sources */,
+				AE03BABA1F02BC1E00C1907F /* LivroTableViewCell.m in Sources */,
 				AE03BA9C1F02AF4000C1907F /* AppDelegate.m in Sources */,
 				AE03BA991F02AF4000C1907F /* main.m in Sources */,
 				AE03BAA51F02AF4000C1907F /* Livraria.xcdatamodeld in Sources */,
