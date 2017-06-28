@@ -8,6 +8,7 @@
 
 #import "LivrosTableViewController.h"
 #import "LivroTableViewCell.h"
+#import "DetalhesViewController.h"
 
 @interface LivrosTableViewController (){
 
@@ -139,14 +140,25 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    DetalhesViewController * detalhesLivro = [segue destinationViewController];
+    
+    NSDictionary * resultSelecionado = [results objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    
+    detalhesLivro.livro.autor = [resultSelecionado objectForKey:@"artistName"];
+    detalhesLivro.livro.titulo = [resultSelecionado objectForKey:@"trackName"];
+    detalhesLivro.livro.precoString = [resultSelecionado objectForKey:@"formattedPrice"];
+    detalhesLivro.livro.descricao = [resultSelecionado objectForKey:@"description"];
+    detalhesLivro.livro.capaUrl = [resultSelecionado objectForKey:@"artworkUrl100"];
+    
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end

@@ -23,8 +23,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.tituloLabel.text = self.livro.titulo;
+    self.autorLabel.text = self.livro.autor;
+    self.precoLabel.text = self.livro.precoString;
+    self.descricaoLabel.text = self.livro.descricao;
+    
+    [self.capaImage setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.livro.capaUrl]]]];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
