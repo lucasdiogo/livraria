@@ -145,9 +145,15 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+   
     DetalhesViewController * detalhesLivro = [segue destinationViewController];
     
+    detalhesLivro.livro = [Livro new];
+    
+    
     NSDictionary * resultSelecionado = [results objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    
+    detalhesLivro.title = [resultSelecionado objectForKey:@"trackName"];
     
     detalhesLivro.livro.autor = [resultSelecionado objectForKey:@"artistName"];
     detalhesLivro.livro.titulo = [resultSelecionado objectForKey:@"trackName"];
