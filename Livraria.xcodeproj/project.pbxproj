@@ -19,6 +19,9 @@
 		AE03BAB71F02B4F800C1907F /* FavoritosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03BAB61F02B4F800C1907F /* FavoritosTableViewController.m */; };
 		AE03BABA1F02BC1E00C1907F /* LivroTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03BAB91F02BC1E00C1907F /* LivroTableViewCell.m */; };
 		AE03BABD1F02C29000C1907F /* ourocard.png in Resources */ = {isa = PBXBuildFile; fileRef = AE03BABC1F02C29000C1907F /* ourocard.png */; };
+		AE39BB2A1F052B4B00A37585 /* LivroFavorito+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AE39BB271F052B4B00A37585 /* LivroFavorito+CoreDataClass.m */; };
+		AE39BB2B1F052B4B00A37585 /* LivroFavorito+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AE39BB291F052B4B00A37585 /* LivroFavorito+CoreDataProperties.m */; };
+		AE39BB2E1F05328200A37585 /* LivroFavoritoDao.m in Sources */ = {isa = PBXBuildFile; fileRef = AE39BB2D1F05328200A37585 /* LivroFavoritoDao.m */; };
 		AECF14141F040AA600C4A493 /* DetalhesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF14131F040AA600C4A493 /* DetalhesViewController.m */; };
 		AECF14171F040CAE00C4A493 /* Livro.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF14161F040CAE00C4A493 /* Livro.m */; };
 		AEED02AF1F03D5230071A911 /* ItunesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = AEED02AE1F03D5230071A911 /* ItunesAPI.m */; };
@@ -54,6 +57,12 @@
 		AE03BAB81F02BC1E00C1907F /* LivroTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivroTableViewCell.h; sourceTree = "<group>"; };
 		AE03BAB91F02BC1E00C1907F /* LivroTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivroTableViewCell.m; sourceTree = "<group>"; };
 		AE03BABC1F02C29000C1907F /* ourocard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ourocard.png; sourceTree = "<group>"; };
+		AE39BB261F052B4B00A37585 /* LivroFavorito+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LivroFavorito+CoreDataClass.h"; sourceTree = "<group>"; };
+		AE39BB271F052B4B00A37585 /* LivroFavorito+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LivroFavorito+CoreDataClass.m"; sourceTree = "<group>"; };
+		AE39BB281F052B4B00A37585 /* LivroFavorito+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LivroFavorito+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AE39BB291F052B4B00A37585 /* LivroFavorito+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LivroFavorito+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AE39BB2C1F05328200A37585 /* LivroFavoritoDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivroFavoritoDao.h; sourceTree = "<group>"; };
+		AE39BB2D1F05328200A37585 /* LivroFavoritoDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivroFavoritoDao.m; sourceTree = "<group>"; };
 		AECF14121F040AA600C4A493 /* DetalhesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalhesViewController.h; sourceTree = "<group>"; };
 		AECF14131F040AA600C4A493 /* DetalhesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalhesViewController.m; sourceTree = "<group>"; };
 		AECF14151F040CAE00C4A493 /* Livro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Livro.h; sourceTree = "<group>"; };
@@ -110,6 +119,7 @@
 		AE03BA961F02AF4000C1907F /* Livraria */ = {
 			isa = PBXGroup;
 			children = (
+				AE39BB251F052A4900A37585 /* Model */,
 				AEED02B01F03D52D0071A911 /* Negocio */,
 				AE03BABB1F02C26500C1907F /* Imagens */,
 				AE03BAB11F02B2C200C1907F /* Controller */,
@@ -154,6 +164,19 @@
 				AE03BABC1F02C29000C1907F /* ourocard.png */,
 			);
 			name = Imagens;
+			sourceTree = "<group>";
+		};
+		AE39BB251F052A4900A37585 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE39BB261F052B4B00A37585 /* LivroFavorito+CoreDataClass.h */,
+				AE39BB271F052B4B00A37585 /* LivroFavorito+CoreDataClass.m */,
+				AE39BB281F052B4B00A37585 /* LivroFavorito+CoreDataProperties.h */,
+				AE39BB291F052B4B00A37585 /* LivroFavorito+CoreDataProperties.m */,
+				AE39BB2C1F05328200A37585 /* LivroFavoritoDao.h */,
+				AE39BB2D1F05328200A37585 /* LivroFavoritoDao.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		AEED02B01F03D52D0071A911 /* Negocio */ = {
@@ -282,11 +305,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE03BAB71F02B4F800C1907F /* FavoritosTableViewController.m in Sources */,
+				AE39BB2B1F052B4B00A37585 /* LivroFavorito+CoreDataProperties.m in Sources */,
 				AE03BAB41F02B45A00C1907F /* LivrosTableViewController.m in Sources */,
 				AE03BABA1F02BC1E00C1907F /* LivroTableViewCell.m in Sources */,
 				AE03BA9C1F02AF4000C1907F /* AppDelegate.m in Sources */,
 				AECF14141F040AA600C4A493 /* DetalhesViewController.m in Sources */,
 				AE03BA991F02AF4000C1907F /* main.m in Sources */,
+				AE39BB2E1F05328200A37585 /* LivroFavoritoDao.m in Sources */,
+				AE39BB2A1F052B4B00A37585 /* LivroFavorito+CoreDataClass.m in Sources */,
 				AECF14171F040CAE00C4A493 /* Livro.m in Sources */,
 				AEED02AF1F03D5230071A911 /* ItunesAPI.m in Sources */,
 				AE03BAA51F02AF4000C1907F /* Livraria.xcdatamodeld in Sources */,
@@ -471,6 +497,7 @@
 				131339BF1F047A000049E606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE03BA8F1F02AF4000C1907F /* Build configuration list for PBXProject "Livraria" */ = {
 			isa = XCConfigurationList;

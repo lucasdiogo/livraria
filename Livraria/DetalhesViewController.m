@@ -7,6 +7,8 @@
 //
 
 #import "DetalhesViewController.h"
+#import "LivroFavorito+CoreDataClass.h"
+#import "LivroFavoritoDao.h"
 
 @interface DetalhesViewController ()
 
@@ -37,6 +39,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)salvaFavoritos:(id)sender {
+    LivroFavoritoDao * dao = [LivroFavoritoDao new];
+    [dao novo:self.livro];
+    [dao salvar];
+
+    UIAlertController * alertController = [UIAlertController alertControllerWithTitle:@"Sucesso" message:@"Livro adicionado com Sucesso!" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 /*

@@ -7,21 +7,33 @@
 //
 
 #import "FavoritosTableViewController.h"
+#import "LivroFavoritoDao.h"
+#import "LivroFavorito+CoreDataClass.h"
+#import "LivroTableViewCell.h"
 
 @interface FavoritosTableViewController ()
 
 @end
 
-@implementation FavoritosTableViewController
+@implementation FavoritosTableViewController{
+    NSMutableArray * livrosFavoritos;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    livrosFavoritos = [NSMutableArray new];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    livrosFavoritos = [NSMutableArray arrayWithArray:[[LivroFavoritoDao new] getLivrosFavoritos]];
+     [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,13 +44,33 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return [livrosFavoritos count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    LivroTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"livroFavoritoCelula" forIndexPath:indexPath];
+    
+    LivroFavorito * result = [livrosFavoritos objectAtIndex:indexPath.row];
+    
+    //alternativa para o teste automatizado
+    cell.isAccessibilityElement = NO;
+    
+    
+    cell.autorLabel.text = result.autor;
+    cell.tituloLabel.text = result.titulo;
+    //    cell.subtituloLabel.text = [result objectForKey:@"genres"];
+    cell.precoLabel.text = result.precoString;
+    [cell.capaImageView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:result.capaUrl] options:NSDataReadingUncached error:nil]]];
+    // Configure the cell...
+    
+    return cell;
 }
 
 /*
@@ -59,17 +91,23 @@
 }
 */
 
-/*
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+       
+        
+        
+        LivroFavoritoDao * dao = [LivroFavoritoDao new];
+        [dao apagar:[livrosFavoritos objectAtIndex:indexPath.row]];
+        [livrosFavoritos removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
+
 
 /*
 // Override to support rearranging the table view.
