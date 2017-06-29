@@ -21,7 +21,7 @@
 //    NSString * itunesSearchTerm = [escapedSearchTerm stringByReplacingOccurrencesOfString:@"%20" withString:@"+"];
     
     
-    NSString * urlPath = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&media=ebook&limit=200", escapedSearchTerm];
+    NSString * urlPath = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&media=ebook&limit=50", escapedSearchTerm];
     
     NSURL * url = [NSURL URLWithString:urlPath];
     

@@ -63,10 +63,9 @@
     LivroTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"livroCelula" forIndexPath:indexPath];
     
     NSDictionary * result = [results objectAtIndex:indexPath.row];
-  
     
-    NSLog(@"passando na celula");
-    
+    //alternativa para o teste automatizado
+    cell.isAccessibilityElement = NO;
     
     
     cell.autorLabel.text = [result objectForKey:@"artistName"];
@@ -81,13 +80,8 @@
 
 #pragma mark - Itunes
 -(void)recebeDados:(NSDictionary *)resposta{
-    NSLog(@"Cheguei aqui");
     
     results = [[resposta objectForKey:@"results"] allObjects];
-    for (NSDictionary * objeto in results) {
-        NSLog(@"Titulo: %@", [objeto objectForKey:@"trackName"]);
-        NSLog(@"Autor: %@", [objeto objectForKey:@"artistName"]);
-    }
     
     [self.tableView reloadData];
 }
@@ -153,7 +147,7 @@
     
     NSDictionary * resultSelecionado = [results objectAtIndex:self.tableView.indexPathForSelectedRow.row];
     
-    detalhesLivro.title = [resultSelecionado objectForKey:@"trackName"];
+    detalhesLivro.title = @"Detalhe";
     
     detalhesLivro.livro.autor = [resultSelecionado objectForKey:@"artistName"];
     detalhesLivro.livro.titulo = [resultSelecionado objectForKey:@"trackName"];

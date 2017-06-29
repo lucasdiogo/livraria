@@ -9,6 +9,7 @@
 #import "DetalhesViewController.h"
 
 @interface DetalhesViewController ()
+
 @property (weak, nonatomic) IBOutlet UILabel *tituloLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subtituloLabel;
 @property (weak, nonatomic) IBOutlet UILabel *autorLabel;

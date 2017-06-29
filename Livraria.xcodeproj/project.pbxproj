@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131339BA1F0479FF0049E606 /* LivrariaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 131339B91F0479FF0049E606 /* LivrariaUITests.m */; };
+		131339C11F047D210049E606 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE03BAA01F02AF4000C1907F /* Main.storyboard */; };
 		AE03BA991F02AF4000C1907F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03BA981F02AF4000C1907F /* main.m */; };
 		AE03BA9C1F02AF4000C1907F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE03BA9B1F02AF4000C1907F /* AppDelegate.m */; };
 		AE03BAA21F02AF4000C1907F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE03BAA01F02AF4000C1907F /* Main.storyboard */; };
@@ -22,7 +24,20 @@
 		AEED02AF1F03D5230071A911 /* ItunesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = AEED02AE1F03D5230071A911 /* ItunesAPI.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		131339BC1F047A000049E606 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE03BA8C1F02AF4000C1907F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE03BA931F02AF4000C1907F;
+			remoteInfo = Livraria;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		131339B71F0479FF0049E606 /* LivrariaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LivrariaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		131339B91F0479FF0049E606 /* LivrariaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivrariaUITests.m; sourceTree = "<group>"; };
+		131339BB1F047A000049E606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE03BA941F02AF4000C1907F /* Livraria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Livraria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE03BA981F02AF4000C1907F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE03BA9A1F02AF4000C1907F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,6 +63,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		131339B41F0479FF0049E606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE03BA911F02AF4000C1907F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,10 +80,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		131339B81F0479FF0049E606 /* LivrariaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				131339B91F0479FF0049E606 /* LivrariaUITests.m */,
+				131339BB1F047A000049E606 /* Info.plist */,
+			);
+			path = LivrariaUITests;
+			sourceTree = "<group>";
+		};
 		AE03BA8B1F02AF4000C1907F = {
 			isa = PBXGroup;
 			children = (
 				AE03BA961F02AF4000C1907F /* Livraria */,
+				131339B81F0479FF0049E606 /* LivrariaUITests */,
 				AE03BA951F02AF4000C1907F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				AE03BA941F02AF4000C1907F /* Livraria.app */,
+				131339B71F0479FF0049E606 /* LivrariaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +170,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		131339B61F0479FF0049E606 /* LivrariaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 131339C01F047A000049E606 /* Build configuration list for PBXNativeTarget "LivrariaUITests" */;
+			buildPhases = (
+				131339B31F0479FF0049E606 /* Sources */,
+				131339B41F0479FF0049E606 /* Frameworks */,
+				131339B51F0479FF0049E606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				131339BD1F047A000049E606 /* PBXTargetDependency */,
+			);
+			name = LivrariaUITests;
+			productName = LivrariaUITests;
+			productReference = 131339B71F0479FF0049E606 /* LivrariaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		AE03BA931F02AF4000C1907F /* Livraria */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE03BAAE1F02AF4000C1907F /* Build configuration list for PBXNativeTarget "Livraria" */;
@@ -163,6 +214,12 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = XCODE;
 				TargetAttributes = {
+					131339B61F0479FF0049E606 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 94T62729BY;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AE03BA931F02AF4000C1907F;
+					};
 					AE03BA931F02AF4000C1907F = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 94T62729BY;
@@ -184,11 +241,20 @@
 			projectRoot = "";
 			targets = (
 				AE03BA931F02AF4000C1907F /* Livraria */,
+				131339B61F0479FF0049E606 /* LivrariaUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		131339B51F0479FF0049E606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131339C11F047D210049E606 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE03BA921F02AF4000C1907F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,6 +269,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		131339B31F0479FF0049E606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				131339BA1F0479FF0049E606 /* LivrariaUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AE03BA901F02AF4000C1907F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +294,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		131339BD1F047A000049E606 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE03BA931F02AF4000C1907F /* Livraria */;
+			targetProxy = 131339BC1F047A000049E606 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AE03BAA01F02AF4000C1907F /* Main.storyboard */ = {
@@ -241,6 +323,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		131339BE1F047A000049E606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 94T62729BY;
+				INFOPLIST_FILE = LivrariaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = testecompany.LivrariaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Livraria;
+			};
+			name = Debug;
+		};
+		131339BF1F047A000049E606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 94T62729BY;
+				INFOPLIST_FILE = LivrariaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = testecompany.LivrariaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Livraria;
+			};
+			name = Release;
+		};
 		AE03BAAC1F02AF4000C1907F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -358,6 +464,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		131339C01F047A000049E606 /* Build configuration list for PBXNativeTarget "LivrariaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				131339BE1F047A000049E606 /* Debug */,
+				131339BF1F047A000049E606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		AE03BA8F1F02AF4000C1907F /* Build configuration list for PBXProject "Livraria" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
