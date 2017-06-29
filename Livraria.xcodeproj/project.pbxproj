@@ -22,6 +22,8 @@
 		AE39BB2A1F052B4B00A37585 /* LivroFavorito+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = AE39BB271F052B4B00A37585 /* LivroFavorito+CoreDataClass.m */; };
 		AE39BB2B1F052B4B00A37585 /* LivroFavorito+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AE39BB291F052B4B00A37585 /* LivroFavorito+CoreDataProperties.m */; };
 		AE39BB2E1F05328200A37585 /* LivroFavoritoDao.m in Sources */ = {isa = PBXBuildFile; fileRef = AE39BB2D1F05328200A37585 /* LivroFavoritoDao.m */; };
+		AE39BB311F055FCB00A37585 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE39BB301F055FCB00A37585 /* MapKit.framework */; };
+		AE39BB341F05619F00A37585 /* MapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE39BB331F05619F00A37585 /* MapaViewController.m */; };
 		AECF14141F040AA600C4A493 /* DetalhesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF14131F040AA600C4A493 /* DetalhesViewController.m */; };
 		AECF14171F040CAE00C4A493 /* Livro.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF14161F040CAE00C4A493 /* Livro.m */; };
 		AEED02AF1F03D5230071A911 /* ItunesAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = AEED02AE1F03D5230071A911 /* ItunesAPI.m */; };
@@ -63,6 +65,9 @@
 		AE39BB291F052B4B00A37585 /* LivroFavorito+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LivroFavorito+CoreDataProperties.m"; sourceTree = "<group>"; };
 		AE39BB2C1F05328200A37585 /* LivroFavoritoDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivroFavoritoDao.h; sourceTree = "<group>"; };
 		AE39BB2D1F05328200A37585 /* LivroFavoritoDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivroFavoritoDao.m; sourceTree = "<group>"; };
+		AE39BB301F055FCB00A37585 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AE39BB321F05619F00A37585 /* MapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaViewController.h; sourceTree = "<group>"; };
+		AE39BB331F05619F00A37585 /* MapaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaViewController.m; sourceTree = "<group>"; };
 		AECF14121F040AA600C4A493 /* DetalhesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalhesViewController.h; sourceTree = "<group>"; };
 		AECF14131F040AA600C4A493 /* DetalhesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalhesViewController.m; sourceTree = "<group>"; };
 		AECF14151F040CAE00C4A493 /* Livro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Livro.h; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE39BB311F055FCB00A37585 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +110,7 @@
 				AE03BA961F02AF4000C1907F /* Livraria */,
 				131339B81F0479FF0049E606 /* LivrariaUITests */,
 				AE03BA951F02AF4000C1907F /* Products */,
+				AE39BB2F1F055FCB00A37585 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,6 +161,8 @@
 				AE03BAB91F02BC1E00C1907F /* LivroTableViewCell.m */,
 				AECF14121F040AA600C4A493 /* DetalhesViewController.h */,
 				AECF14131F040AA600C4A493 /* DetalhesViewController.m */,
+				AE39BB321F05619F00A37585 /* MapaViewController.h */,
+				AE39BB331F05619F00A37585 /* MapaViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -177,6 +186,14 @@
 				AE39BB2D1F05328200A37585 /* LivroFavoritoDao.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		AE39BB2F1F055FCB00A37585 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE39BB301F055FCB00A37585 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		AEED02B01F03D52D0071A911 /* Negocio */ = {
@@ -314,6 +331,7 @@
 				AE39BB2E1F05328200A37585 /* LivroFavoritoDao.m in Sources */,
 				AE39BB2A1F052B4B00A37585 /* LivroFavorito+CoreDataClass.m in Sources */,
 				AECF14171F040CAE00C4A493 /* Livro.m in Sources */,
+				AE39BB341F05619F00A37585 /* MapaViewController.m in Sources */,
 				AEED02AF1F03D5230071A911 /* ItunesAPI.m in Sources */,
 				AE03BAA51F02AF4000C1907F /* Livraria.xcdatamodeld in Sources */,
 			);
